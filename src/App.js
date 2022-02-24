@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Clock } from "./components/Clock/Clock";
+import { CountDown } from "./components/CountDown/CountDown";
+import { Crono } from "./components/Crono/Crono";
+import { Navbar } from "./components/Navbar/Navbar";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        
+        <Navbar/>
+        <main>
+        <Routes>
+          <Route path="/">
+            <Route index element={<Clock />} />
+            <Route path="countDown" element={<CountDown/>} />
+            <Route path="crono" element={<Crono/>} />
+          </Route>
+        </Routes>
+
+        </main>
+      </BrowserRouter>
     </div>
   );
 }

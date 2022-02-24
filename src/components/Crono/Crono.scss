@@ -1,0 +1,46 @@
+.c-crono {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.1px);
+  -webkit-backdrop-filter: blur(6.1px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  width: 95%;
+  margin: 10px auto;
+  color: white;
+  padding: 20px;
+  font-size: 2.2rem;
+
+  h3 {
+    margin: 5px auto 10px;
+  }
+
+  button {
+    width: 215px;
+    height: 40px;
+    margin: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    padding-left: 10px;
+    border: none;
+    color: white;
+    
+    &.start{
+        background-color:blue;
+    }
+
+    &.stop{
+        background-color: red;
+    }
+
+    &.resume{
+        background-color:green;
+    }
+
+    &.reset{
+        background-color:coral;
+    }
+
+  }
+}
